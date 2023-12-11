@@ -1,6 +1,7 @@
 public with sharing class AccountController {
     public static List<Account> getAllActiveAccounts() {
-      return [SELECT Id, Name, Active__c FROM Account WHERE Active__c = 'Yes' WITH SECURITY_ENFORCED];
+      //return [SELECT Id, Name, Active__c FROM Account WHERE Active__c = 'Yes' WITH SECURITY_ENFORCED];
+      return [SELECT Id, Name FROM Account WITH SECURITY_ENFORCED];
     }
 
     
@@ -21,7 +22,7 @@ public with sharing class AccountController {
     public static List<Contact> getContactFromSearch(String strSearch){
       try {
           string tempInput = '%' + strSearch + '%';
-          system.debug('----commit log---');
+          system.debug('----commit log----');
           return [select id, name, email from contact where Name like  : tempInput];
       } catch (Exception e) {
         throw new AuraHandledException(e.getMessage());
