@@ -1,0 +1,19 @@
+.time{
+    font-size:1rem;
+
+}
+
+.greeting{
+    font-style: italics;
+    font-weight: 400;
+}   
+
+.hello{
+    font-size: 2rem;
+}
+
+.ctrColor
+{
+    background-color: darkgrey;
+
+}

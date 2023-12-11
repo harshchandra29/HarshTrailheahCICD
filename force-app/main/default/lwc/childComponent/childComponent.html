@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Child Component">
+        <p>{msg}</p>
+
+        <!-- child to parent : send msg to parent on button click-->
+        <lightning-button label="send message" onclick={passmymsgtoparent}></lightning-button>
+    </lightning-card>
+</template>

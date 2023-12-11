@@ -1,0 +1,39 @@
+<template>
+    <lightning-layout  class="slds-align_absolute-center slds-text-align_center ctrColor" multiple-rows>
+      <lightning-layout-item size="12">
+          <div class="hello">{hello}</div>  
+      </lightning-layout-item> 
+      <lightning-layout-item size="12">
+        <div class="time">{time}</div>
+      </lightning-layout-item> 
+      <lightning-layout-item size="12">
+        <div class="greeting">{greeting}</div>
+        
+    <lightning-layout class="slds-text-align_center" size="5">
+      <lightning-layout-item size="2">
+          <lightning-input type="text" label="Name: " name="nameN" variant="label-hidden" placeholder="Enter your name!"></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="2">
+          <lightning-input type="text" label="Mob: " name="mobN" variant="label-hidden" placeholder="Enter your mob!"></lightning-input>
+        </lightning-layout-item>
+      <lightning-layout-item size="1">  
+          <lightning-button-icon icon-name="utility:add" onclick={updateName}></lightning-button-icon>      
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+          <div>Upcoming!! </div>
+          <template for:each={Todo} for:item="var1">
+            <div class="list-display" key={var1.todoId} >
+
+              <span >{var1.todoName}</span>
+              <lightning-button-icon icon-name="utility:check" onclick={updateName}></lightning-button-icon>
+              <lightning-button-icon icon-name="utility:delete" onclick={updateName}></lightning-button-icon>
+
+            </div>
+          </template>
+        </lightning-layout-item>
+
+    </lightning-layout>
+  </lightning-layout-item>  
+</lightning-layout>
+</template>

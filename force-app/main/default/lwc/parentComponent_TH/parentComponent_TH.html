@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div class="sdls-p-horizontal-small">
+            <legend> Message</legend>
+            <lightning-input variant="label-hidden" onchange={handleOnChange}></lightning-input>
+        </div>
+        <!-- parent to child
+        <c-child-Component></c-child-Component>
+         -->   
+
+        
+        
+        <c-child-Component onmsgfromchild={handlechildmsg}></c-child-Component>
+        
+    </lightning-card>
+</template>

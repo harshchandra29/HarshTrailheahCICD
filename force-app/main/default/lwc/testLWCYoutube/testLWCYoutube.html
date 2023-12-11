@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="TestWired" icon-name="bikes">
+
+            inside1
+
+            <template for:each={wiredContact.data} for:item="acc1">
+                <p key={acc1.id}>
+                      {acc1.Name}  
+
+                </p>    
+            </template>
+
+            another Loops    
+
+            <lightning-datatable columns={columns} key-field="Id" data={contactLst}></lightning-datatable>
+
+    </lightning-card>    
+</template>
