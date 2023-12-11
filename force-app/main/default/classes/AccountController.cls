@@ -21,6 +21,7 @@ public with sharing class AccountController {
     public static List<Contact> getContactFromSearch(String strSearch){
       try {
           string tempInput = '%' + strSearch + '%';
+          system.debug('----commit log---');
           return [select id, name, email from contact where Name like  : tempInput];
       } catch (Exception e) {
         throw new AuraHandledException(e.getMessage());
