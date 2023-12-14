@@ -6,7 +6,7 @@
     }
   ],
   "name": "Harsh Trailhead Nov23",
-  "namespace": "",
+  "namespace": "namespace_harsh",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "58.0"
 }
